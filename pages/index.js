@@ -7,7 +7,7 @@ class Home extends React.Component {
   }
 
   callAPI() {
-      fetch("http://localhost:9000/testAPI")
+      fetch(process.env.API_URL + "/testAPI")
           .then(res => res.text())
           .then(res => this.setState({ apiResponse: res }));
   }
